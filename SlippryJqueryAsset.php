@@ -4,14 +4,14 @@ use yii\web\AssetBundle;
 
 class SlippryJqueryAsset extends AssetBundle
 {
-    public $sourcePath='@bower/slippry/dist';
+    public $sourcePath='@bower/slippry';
 
     public $js=[
-        'slippry.min.js'
+        'dist/slippry.min.js'
     ];
 
     public $css=[
-        'slippry.css'
+        'dist/slippry.css'
     ];
     public $images=[
         'images/arrows.svg',
