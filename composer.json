@@ -1,0 +1,26 @@
+{
+    "name": "nulledcc/yii2-slippry",
+    "description": "The Slippry widget for the Yii framework",
+    "keywords": [
+        "yii2",
+        "slippry"
+    ],
+    "type": "yii2-widget",
+    "license": "BSD-3-Clause",
+    "authors": [
+        {
+            "name": "Davit",
+            "email": "admin@yer1.com"
+        }
+    ],
+    "require": {
+        "yiisoft/yii2": "*",
+	"fxp/composer-asset-plugin": ">=1.0.0",
+	"bower-asset/slippry":">=1.3.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "nulledcc\\slippry\\": ""
+        }
+    }
+}
