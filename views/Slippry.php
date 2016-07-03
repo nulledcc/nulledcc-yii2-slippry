@@ -1,5 +1,5 @@
 <?php
-use yii\helpers\BaseHtml
+use yii\helpers\Html;
 $context=$this->context;
 
 if(!is_null($context->items)) :
@@ -13,7 +13,7 @@ if(!is_null($context->items)) :
                     if(isset($value["a"])){
                         echo Html::beginTag("a",$value["a"]);
                             echo Html::img($value["img"],$op);
-                        echo Html::endTag("a")
+                        echo Html::endTag("a");
                     }else{
                        echo Html::img($value["img"],$op);
                     }

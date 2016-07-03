@@ -10,7 +10,7 @@ use yii\web\View;
  *      'items'=>[
  *          ["img"=>"http://paygate.or.kr/wp-content/uploads/2013/11/slider__wat.png","a"=>["href"=>"http://mysite.com/"]],
             "http://parallaxslider.com/images/classic/bulletsFullWidth/02_bulletsFW.jpg"
- *      ]
+ *      ],
  *      'clientOptions'=>[
  *          'accepts'=>'random',
  *      ]
@@ -19,7 +19,7 @@ use yii\web\View;
 class slippry extends Widget
 {
     public $items=[];
-    public $uniqID= uniqid();
+    public $uniqID;
 
     /**
      * @var array The HTML attributes for the container tag
@@ -35,12 +35,13 @@ class slippry extends Widget
     public function init()
     {
         parent::init();
+        $this->uniqID= uniqid();
         if(empty($this->items))return null;
 
         $this->registerAsset();
 
         $clientOptions=!empty($this->clientOptions) ? json_encode($this->clientOptions) : '{}';
-        $clientObj= () ? 'slippry'.ucwords($this->options['id']) : 'slippry'.$this->uniqID;
+        $clientObj= (isset($this->options['id'])) ? 'slippry'.ucwords($this->options['id']) : 'slippry'.ucwords($this->uniqID);
         $js="jQuery('#{$clientObj}').slippry({$clientOptions});";
 
         $position= View::POS_READY ;
