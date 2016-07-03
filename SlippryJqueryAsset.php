@@ -13,7 +13,10 @@ class SlippryJqueryAsset extends AssetBundle
     public $css=[
         'slippry.css'
     ];
-
+    public $images=[
+        'images/arrows.svg',
+        'images/sy-loader.gif'
+    ];
     public $depends=[
         'yii\web\JqueryAsset'
     ];
