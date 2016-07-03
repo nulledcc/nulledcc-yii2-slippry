@@ -1,6 +1,14 @@
 # yii2-slippry
 The slippry slider widget for the Yii framework.
 
+### NOTE(WARNING)
+To load images arrows.svg and sy-loader.gif
+change default in slippry.css to
+```css
+background: url("../images/sy-loader.gif") 50% 50% no-repeat;
+background-image: url("../images/arrows.svg");
+```
+
 See more here: http://slippry.com
 ## Installation
 
